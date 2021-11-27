@@ -1,0 +1,68 @@
+
+/showing all the available databases
+
+show dbs
+
+//creating database with name assignment and entering into the same
+
+use assignment
+
+
+//inserting first document to the collection named users
+
+db.users.insert({
+
+first_name:'pankaj',
+last_name:'hmk',
+email:'hmk@mail.com',
+gender:'others',
+ip_address:'h12k34c',
+age:'32'
+
+})
+
+
+//inserting documents using intesertMany
+
+db.users.insertMany([{},{},{},{}])
+
+//Reading all  documents using find
+
+db.users.find()
+
+//Reading  one document using findOne
+
+db.users.findOne({"_id":
+ObjectId("61a2445bda04a15bf351ac88")
+})
+//updating document
+
+db.users.update({"_id":
+ObjectId("61a2445bda04a15bf351ac88")
+},{$set:{age:'52'}})
+
+
+//update Many 
+
+db.users.updateMany({"gender":
+'Male')
+},{$set:{gender:'binary'}})
+
+//deleting document using remove
+
+db.users.remove({"gender":
+'Male')
+},1)
+
+//deleting document using delete one
+
+db.users.deleteOne({"_id":
+ObjectId("61a2445bda04a15bf351ac88")
+})
+
+//deleting using deleteMany
+
+db.users.deleteMany({"gender":
+'Male')
+})
+
