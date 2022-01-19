@@ -48,6 +48,8 @@ db.users.updateMany({"gender":
 'Male')
 },{$set:{gender:'binary'}})
 
+
+
 //deleting document using remove
 
 db.users.remove({"gender":
